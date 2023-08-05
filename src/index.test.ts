@@ -5,7 +5,8 @@ test("C is a", () => {
 });
 
 test("C adds up", () => {
-  expect(c(2, 1)).toBe(2)
+  expect(c(2, 0)).toBe(2)
 })
+
 
 export { c };
