@@ -6,8 +6,13 @@ on:
 
 jobs:
   deploy:
-    name: 'Deploy'
+    name: 'Preview'
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      checks: write
+      discussions: write
+      statuses: write
 
     steps:
       - uses: actions/checkout@v3
