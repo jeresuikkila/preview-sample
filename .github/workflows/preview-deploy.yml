@@ -22,6 +22,7 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           build_command: 'npm run examples:generate'
           build_directory: 'examples/dist'
+          deploy_alias: ${{ env.BRANCH_NAME }}
 
     # Creates a status check with link to preview
       - name: Status check
