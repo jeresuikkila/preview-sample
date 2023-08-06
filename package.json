@@ -13,7 +13,7 @@
     "view:coverage": "yarn test && serve coverage/lcov-report",
     "docs": "typedoc",
     "docs:serve": "npm run docs && serve docs",
-    "examples:generate": "ts-node scripts/build-examples.ts",
+    "examples:generate": "HASH=$(git rev-parse --short HEAD) ts-node scripts/build-examples.ts",
     "examples:serve": "serve examples/dist"
   },
   "keywords": [],
@@ -36,5 +36,8 @@
     "ts-node": "^10.0.4",
     "typedoc": "^0.24.8",
     "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.8"
   }
 }
