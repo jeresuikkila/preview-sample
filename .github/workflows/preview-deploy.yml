@@ -33,3 +33,9 @@ jobs:
           context: Netlify preview
           state: success
           target_url: ${{ env.NETLIFY_PREVIEW_URL }}
+    # Comment on the PR with the link
+      - name: Add preview link comment to the PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            Your preview is at: ${{ env.NETLIFY_PREVIEW_URL }}
