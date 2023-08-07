@@ -35,8 +35,12 @@ jobs:
           state: success
           target_url: ${{ env.NETLIFY_PREVIEW_URL }}
     # Comment on the PR with the link
-      - name: Add preview link comment to the PR
+      - name: Add preview links comment to the PR
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            Your preview is at: ${{ env.NETLIFY_PREVIEW_URL }}
+            Your PR preview is at: 
+            Examples: ${{ env.NETLIFY_PREVIEW_URL }}/examples
+            Docs: ${{ env.NETLIFY_PREVIEW_URL }}/docs
+            Coverage: ${{ env.NETLIFY_PREVIEW_URL }}/coverage
+            

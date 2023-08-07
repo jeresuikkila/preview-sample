@@ -15,7 +15,8 @@
     "docs:serve": "npm run docs && serve docs",
     "examples:generate": "HASH=$(git rev-parse --short HEAD) ts-node scripts/build-examples.ts",
     "examples:serve": "serve examples/dist",
-    "preview:generate": "npm run docs && npm run examples:generate && npm run test && ts-node scripts/combine-preview.ts"
+    "preview:generate": "npm run docs && npm run examples:generate && npm run test && ts-node scripts/combine-preview.ts",
+    "preview:serve": "npm run preview:generate && serve preview"
   },
   "keywords": [],
   "author": "Jere Suikkila <jere@suikkila.com>",
