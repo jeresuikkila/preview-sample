@@ -1,7 +1,8 @@
-console.log(`I am alive`);
 
-function c(a: number, b: number): number {
+export function c(a: number, b: number): number {
   return a;
 }
 
-export { c };
+export function calculateMitigatedDamage(rawDamage: number, magicResist: number) {
+  return rawDamage * (100 / (100 + magicResist))
+}
