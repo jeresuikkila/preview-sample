@@ -2,8 +2,6 @@ import * as esbuild from 'esbuild';
 import fs from 'node:fs'
 import Handlebars from 'handlebars';
 
-console.log(process.env.HASH);
-
 async function build() {
 
     await esbuild.build({
