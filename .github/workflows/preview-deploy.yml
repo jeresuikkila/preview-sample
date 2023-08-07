@@ -22,8 +22,8 @@ jobs:
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          build_command: 'npm run examples:generate'
-          build_directory: 'examples/dist'
+          build_command: 'npm run preview:generate'
+          build_directory: 'preview'
           deploy_alias: ${{ env.BRANCH_NAME }}
 
     # Creates a status check with link to preview
